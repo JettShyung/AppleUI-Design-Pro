@@ -1,0 +1,6 @@
+interface:
+  display_name: "AppleUI Design Pro"
+  short_description: "Apple UI design, SwiftUI, Flutter, Liquid Glass, and interaction"
+  default_prompt: "Use $appleui-design-pro to design or implement this Apple app UI in the project's SwiftUI or Flutter stack, applying Liquid Glass optics, interaction, and accessibility."
+policy:
+  allow_implicit_invocation: true
