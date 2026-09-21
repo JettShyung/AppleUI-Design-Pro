@@ -11,6 +11,7 @@ product names are trademarks of Apple Inc.
 ## What it covers
 
 - Apple interface hierarchy, navigation, typography, motion, and accessibility.
+- Tab Bar design: drag preview, release commitment, lens motion, and semantic state.
 - Native Liquid Glass APIs, compatibility fallbacks, and custom refraction math.
 - SwiftUI component architecture and state/performance guidance.
 - Flutter/Cupertino implementation and shader-backed glass examples.
@@ -49,6 +50,8 @@ Detailed theory and implementation guidance:
   agency, hierarchy, navigation, feedback, and surface roles.
 - [Optical core](appleui-design-pro/references/optical-core.md): SDF geometry,
   displacement encoding, compositing, renderer mapping, and acceptance checks.
+- [Tab Bar design](appleui-design-pro/references/tab-bars.md): committed navigation
+  versus drag preview, lens layering, interruption, and behavioral checks.
 - [Interaction and motion](appleui-design-pro/references/interaction-motion.md):
   gesture lifecycle, interruption, springs, momentum, boundaries, and haptics.
 - [Layout and typography](appleui-design-pro/references/layout-typography.md):

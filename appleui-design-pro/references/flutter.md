@@ -115,6 +115,11 @@ platform view containing UIGlassEffect does not automatically sample every Flutt
 layer correctly. Do not add a large dependency before checking the current SDK and
 existing project packages.
 
+For system appearance sliders and mixed native/Flutter materials, read
+[system glass preferences](system-glass-preferences.md). A fixed blur or custom
+shader does not subscribe to the OS preference merely because adjacent native
+controls do.
+
 ## Interactions
 
 Use Cupertino/page/scroll physics before custom gesture code. For custom dragging,

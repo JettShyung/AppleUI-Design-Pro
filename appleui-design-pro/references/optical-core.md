@@ -35,8 +35,11 @@ width/height. Preserve aspect ratio in physical coordinates rather than stretchi
 a normalized square field. Do not reuse the demo's illustrative radius/UV constants
 as universal geometry; they are not constrained to a conventional rounded rectangle.
 
-Use the same dimensions, corner radius, and transform for the visible clip, optical
-field, shadow, and hit geometry. Otherwise the lens edge and visible edge separate.
+Use the same shape and coordinate mapping for the visible clip, optical field,
+highlight and shadow mask. A bounding rectangle alone is insufficient after
+nonuniform scale: circular corners become elliptical. Decorative deformation may
+leave hit geometry stable; map input into the presentation space deliberately.
+Otherwise optical and visible edges separate.
 
 ## 3. Smooth the edge profile
 

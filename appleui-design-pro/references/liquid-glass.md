@@ -19,6 +19,10 @@ variants coherent within one group. Tint selectively for a primary action rather
 than coloring every element. Large surfaces need legible content and restrained
 adaptation, not a magnified version of a tiny jewel-like button.
 
+For system slider coverage and adjustment range, read
+[system glass preferences](system-glass-preferences.md). Let native glass own its
+adaptive fill and rim; fixed decorative layers can mask its clear endpoint.
+
 ## SDK and deployment
 
 Xcode 26 SDK declarations checked during authoring mark `glassEffect`, `Glass`,
