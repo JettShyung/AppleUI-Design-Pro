@@ -3,12 +3,12 @@ name: appleui-design-pro
 description: >-
   Design, implement, refine, and review Apple-platform interfaces in SwiftUI,
   UIKit/AppKit, WidgetKit, or Flutter/Cupertino, including Liquid Glass,
-  Tab Bar interaction, adaptive layout, and accessibility. Use for Apple UI design,
+  Tab Bar templates and interaction, adaptive layout, and accessibility. Use for Apple UI design,
   SwiftUI styling, 苹果 App 设计, 液态玻璃, and explicitly requested Apple-style web
   interfaces. Do not use for generic Swift/Dart logic, Figma work, or unrelated
   full-app rewrites.
 metadata:
-  version: "1.2.1"
+  version: "1.3.0"
 ---
 
 # AppleUI Design Pro
@@ -64,7 +64,8 @@ Read the matching references, not this entire library on every task.
 | Native Liquid Glass or migration from blur | [Liquid Glass](references/liquid-glass.md) |
 | System glass slider, incomplete coverage, weak range, native composition ghosting, scroll-edge blur | [System glass preferences](references/system-glass-preferences.md) |
 | Glass optics, refraction, custom shader, material fidelity | [Optical core](references/optical-core.md), then the selected platform reference |
-| Tab Bar design, draggable lens, commit timing, held-edge/alpha artifacts | [Tab Bar design](references/tab-bars.md), then the selected platform reference |
+| Tab Bar design, reusable Flutter template, scroll-to-minimize, package integration | [Tab Bar design](references/tab-bars.md); use the [Flutter template](references/flutter-tab-bar-template.md) for copy-and-use code |
+| Draggable lens, commit timing, held-edge/alpha artifacts | [Tab Bar design](references/tab-bars.md), then the selected platform reference |
 | Tap, drag, sheet, spring, interruption, haptics | [Interaction and motion](references/interaction-motion.md) |
 | VoiceOver, Dynamic Type, visual settings, keyboard | [Accessibility](references/accessibility.md) |
 | SwiftUI state, concurrency, layout/animation performance | [State and performance](references/state-performance.md) |

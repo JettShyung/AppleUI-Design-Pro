@@ -41,6 +41,13 @@ else
   echo "SKIP: Node.js is unavailable; displacement checks did not run."
 fi
 
+flutter_bin=${FLUTTER_BIN:-flutter}
+if command -v "$flutter_bin" >/dev/null 2>&1; then
+  "$repo_dir/scripts/check_flutter_tab_bar.sh"
+else
+  echo "SKIP: Flutter is unavailable; set FLUTTER_BIN to check the Tab Bar template."
+fi
+
 if command -v xcrun >/dev/null 2>&1; then
   check_tmp=$(mktemp -d "${TMPDIR:-/tmp}/appleui-check.XXXXXX")
   trap 'rm -rf "$check_tmp"' EXIT HUP INT TERM

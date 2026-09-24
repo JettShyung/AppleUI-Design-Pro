@@ -6,6 +6,21 @@ ownership. A Tab Bar is navigation; an intermediate lens position is not a route
 Read [interaction and motion](interaction-motion.md) and, for glass,
 [the optical core](optical-core.md) plus the renderer's reference.
 
+## Choose the implementation
+
+- **Pure Flutter / copy-and-use template:** read the
+  [Flutter Tab Bar template](flutter-tab-bar-template.md), copy its component, and
+  adapt its working demo. It includes stretch motion, release-only drag selection,
+  optional scroll-to-minimize, theme, badges, keyboard and semantic controls.
+- **Native iOS glass from Flutter:** use the template reference's
+  [package route](flutter-tab-bar-template.md#when-native-ios-glass-is-required).
+  Inspect the installed package version before choosing a bridge or patch. A
+  pure Flutter request does not authorize silently replacing it with native views.
+- **Native SwiftUI/UIKit project:** use the system tab container and public APIs;
+  keep this reference's state/input/verification rules.
+- **Existing optical defect:** isolate the renderer/composition first using the
+  held-edge diagnostic below. Do not replace a working bar just to adopt a template.
+
 ## Establish the observed contract
 
 Inspect the reference at rest, pointer down, slow drag, stationary hold, reversal,
@@ -183,9 +198,11 @@ arcs elliptical: a circular SDF rebuilt from a transformed bounding box no longe
 matches the painted clip. Use a common canonical coordinate space or retain a
 shape-preserving transform. Do not repair geometric disagreement with thicker rims.
 
-## Calibration record — scoped implementation example
+## Historical calibration — scoped custom-renderer example
 
-The following data comes from a five-item Flutter implementation checked on iPhone
+This is a historical custom-renderer record, superseded in that product by a native
+package integration. It is **not the current template specification**. The data
+comes from a five-item Flutter implementation checked on iPhone
 18 Pro / iOS 27 with Impeller and a native UIKit rail, 2026-09-21. It is a tunable
 example, **not a GitHub/Apple measurement or a universal Tab Bar preset**. Logical
 points, durations and renderer-specific blur values must retain their units.

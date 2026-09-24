@@ -1,1 +1,6 @@
 .DS_Store
+
+# Generated when checking the Flutter starter in place.
+appleui-design-pro/assets/flutter_tab_bar/.dart_tool/
+appleui-design-pro/assets/flutter_tab_bar/build/
+appleui-design-pro/assets/flutter_tab_bar/pubspec.lock

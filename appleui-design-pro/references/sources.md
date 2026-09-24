@@ -97,3 +97,23 @@ the pinned sources, recheck changed APIs, preserve the optical-core corrections,
 and rerun code/behavior checks. Do not overwrite downstream additions blindly.
 
 See [third-party notices](../THIRD_PARTY_NOTICES.md) for upstream license material.
+
+## Tab Bar template sources — 2026-09-24
+
+- User-supplied `ai_studio_code.txt`: pure Flutter demonstration with separate
+  leading/trailing edge curves, a backdrop blur rail, and tap-driven selection.
+  The new component retains that stretch recipe while removing the extra easing
+  pass, hard-coded dark palette, fixed safe-area offset, and demo-only state.
+- [liquid_tabbar_minimize 1.1.0](https://pub.dev/packages/liquid_tabbar_minimize/versions/1.1.0)
+  and its [upstream repository](https://github.com/mesutissever/liquid_tabbar_minimize):
+  adaptive renderer choice, minimize/expand interaction, badge metadata, and native
+  integration boundaries. Inspected the published archive's Dart implementation
+  and `SwiftUITabBarPlatformView.swift`; the latter implements UIKit despite its
+  name and the README's SwiftUI wording. No package source or product fork is
+  bundled in the pure Flutter template.
+- New synthesis: host-owned minimize state, release-only preview/commit separation,
+  current-rect interruption, callback rejection reconciliation, cancellation and
+  vertical-dismissal protection, theme/accessibility adaptation, executable tests.
+
+The [template guide](flutter-tab-bar-template.md) pins package-specific findings to
+1.1.0. They are not perpetual defects or requirements of every native bridge.

@@ -11,7 +11,8 @@ product names are trademarks of Apple Inc.
 ## What it covers
 
 - Apple interface hierarchy, navigation, typography, motion, and accessibility.
-- Tab Bar design: drag preview, release commitment, lens motion, and semantic state.
+- Tab Bar design: ready-to-copy Flutter component and demo, release-only dragging,
+  stretch motion, scroll-to-minimize, badges, accessibility, and native package guidance.
 - Native Liquid Glass APIs, compatibility fallbacks, and custom refraction math.
 - SwiftUI component architecture and state/performance guidance.
 - Flutter/Cupertino implementation and shader-backed glass examples.
@@ -88,6 +89,20 @@ Use $appleui-design-pro to build this Flutter floating toolbar with real edge
 refraction, native control semantics, large-text reflow, and a solid fallback.
 ```
 
+### Reusable Flutter Tab Bar
+
+```text
+用 $appleui-design-pro 的 Tab Bar 模板为我的 Flutter 项目实现底部导航：
+保留现有页面，拖动只预览、松手才切换，支持滚动收起和明暗模式。
+```
+
+Copy the single [component](appleui-design-pro/assets/flutter_tab_bar/lib/apple_tab_bar.dart),
+then adapt the [working demo](appleui-design-pro/assets/flutter_tab_bar/lib/main.dart).
+The [integration guide](appleui-design-pro/references/flutter-tab-bar-template.md)
+explains setup, customization, scroll handling, validation, and when to use
+`liquid_tabbar_minimize` for native iOS rendering. The pure Flutter template needs
+no third-party dependency; its blur material is explicitly an approximation.
+
 ## Validation
 
 Run every check available on the current machine:
@@ -97,7 +112,8 @@ Run every check available on the current machine:
 ```
 
 The script validates YAML metadata and local Markdown links, runs the JavaScript
-optical checks, type-checks the Swift examples, and compiles the Metal shader when
+optical checks, analyzes and tests the Flutter Tab Bar in a temporary copy,
+type-checks the Swift examples, and compiles the Metal shader when
 the required tools are installed. Review any `SKIP` lines before a release.
 
 The JavaScript optical check can also run independently:
@@ -106,10 +122,11 @@ The JavaScript optical check can also run independently:
 node appleui-design-pro/assets/displacement.test.mjs
 ```
 
-The Swift examples type-check for macOS and iOS with Swift 6.4. Metal compilation,
-Flutter analysis, device rendering, VoiceOver, and GPU profiling still require the
-corresponding toolchains and target projects. The files in `assets/` are examples to
-adapt, not a drop-in framework.
+Set `FLUTTER_BIN` to the Flutter executable if it is not on `PATH`. The Tab Bar
+component/demo/tests were checked with Flutter 3.47.5 / Dart 3.13.4; the Swift
+examples type-check for macOS and iOS with Swift 6.4. Device feel, VoiceOver, and
+GPU profiling need their target environments. The Tab Bar is a copyable starter;
+other `assets/` files remain examples to adapt, not a shared runtime framework.
 
 ## Maintain and improve
 
@@ -119,8 +136,9 @@ edit itself in the background; update it only after an explicit maintenance requ
 1. Reproduce a real failure or identify a concrete missing decision.
 2. Make the smallest correction in `SKILL.md`, the relevant reference, or an asset.
 3. Run `./scripts/check.sh` and review every skipped check.
-4. Test the behavior with a realistic prompt, then commit the change.
-5. Bump `metadata.version` and create a patch release only when publishing it.
+4. Test observable behavior with a realistic use case.
+5. Bump `metadata.version` for a material skill update. Commit, tag, or publish
+   only when requested; a local skill update does not require a release.
 
 For local development, point the installed skill directory at this repository's
 `appleui-design-pro` directory with a symbolic link. Codex detects local skill

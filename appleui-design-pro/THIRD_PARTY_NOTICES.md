@@ -5,6 +5,17 @@ under the repository's MIT License. The notices below are retained for source-de
 guidance. Platform APIs and official documentation remain attributable to their
 respective owners.
 
+## Tab Bar template references
+
+The Flutter Tab Bar starter adapts the leading/trailing-edge animation recipe from
+the user's supplied `ai_studio_code.txt` (2026-09-24). Its reusable implementation,
+integration guidance, and tests are contributions to this skill.
+
+[liquid_tabbar_minimize](https://github.com/mesutissever/liquid_tabbar_minimize)
+version 1.1.0 (MIT) was inspected for API/behavior guidance. This repository does
+not redistribute that package or its native code. Applications that vendor or
+modify its source must retain the package's own copyright and MIT license notice.
+
 ## emilkowalski/skills
 
 Source: https://github.com/emilkowalski/skills/tree/85e8e2363b713506e1d5b6e07a0eb2da66be1bc3

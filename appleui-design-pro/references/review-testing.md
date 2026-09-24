@@ -32,6 +32,11 @@ baseline review. Don't automatically re-record a changed baseline to make tests 
 
 ## Bundled examples
 
+- [Flutter Tab Bar template](flutter-tab-bar-template.md): single-file component,
+  runnable demo, and gesture/accessibility tests in
+  [flutter_tab_bar](../assets/flutter_tab_bar). Copy this complete starter when
+  requested; it is independent of the refraction assets and native package.
+
 - [StyleDrivenCard.swift](../assets/StyleDrivenCard.swift): custom style environment,
   internal configuration, nested content type erasure, dynamically adapting body.
 - [GlassActions.swift](../assets/GlassActions.swift): native controls, custom effect
